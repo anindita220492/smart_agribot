@@ -1,6 +1,6 @@
 
 
-!pip install streamlit --quiet
+#!pip install streamlit --quiet
 
 import streamlit as st
 from utils.gemini_app import ask_gemini
