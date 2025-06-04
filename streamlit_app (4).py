@@ -14,7 +14,7 @@ from utils.weather_api import get_weather
 
 PROJECT_ID = st.secrets["PROJECT_ID"]
 WEATHER_API_KEY = st.secrets["WEATHER_API_KEY"]
-GCP_SERVICE_ACCOUNT = json.loads(st.secrets["GCP_SERVICE_ACCOUNT"])
+GCP_SERVICE_ACCOUNT = st.secrets["GCP_SERVICE_ACCOUNT"]
 
 credentials = service_account.Credentials.from_service_account_info(GCP_SERVICE_ACCOUNT)
 vertexai.init(project=PROJECT_ID, location="us-central1", credentials=credentials)
